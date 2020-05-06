@@ -1,0 +1,16 @@
+---
+all:
+  children:
+    {% for provider, regions in providers.items() %}
+    {{ provider }}:
+      hosts:
+        {% for vms in regions.value %}
+        {% for alias, access in vms.items() %}
+        {{ access[1] }}:
+          RELAYMONKEY_FINGERPRINT: {{ alias }}
+        {% endfor %}
+        {% endfor %}
+      vars:
+        ansible_user: {{ regions.value[0].items()[0][1][0] }}
+        ansible_ssh_private_key_file: {{ regions.value[0].items()[0][1][2] }}
+    {% endfor %}

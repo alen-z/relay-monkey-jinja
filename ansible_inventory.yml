@@ -1,0 +1,382 @@
+---
+all:
+  children:
+    linode_public_ips:
+      hosts:
+        139.162.180.189:
+          RELAYMONKEY_FINGERPRINT: linode-instance-eu-central
+        45.79.51.122:
+          RELAYMONKEY_FINGERPRINT: linode-instance-us-central
+        172.105.25.123:
+          RELAYMONKEY_FINGERPRINT: linode-instance-ca-central
+        173.255.255.140:
+          RELAYMONKEY_FINGERPRINT: linode-instance-us-west
+        172.105.52.83:
+          RELAYMONKEY_FINGERPRINT: linode-instance-ap-west
+        74.207.231.77:
+          RELAYMONKEY_FINGERPRINT: linode-instance-us-southeast
+        50.116.58.123:
+          RELAYMONKEY_FINGERPRINT: linode-instance-us-east
+        172.104.50.22:
+          RELAYMONKEY_FINGERPRINT: linode-instance-ap-south
+        172.105.166.201:
+          RELAYMONKEY_FINGERPRINT: linode-instance-ap-southeast
+        109.74.201.91:
+          RELAYMONKEY_FINGERPRINT: linode-instance-eu-west
+        139.162.86.133:
+          RELAYMONKEY_FINGERPRINT: linode-instance-ap-northeast
+      vars:
+        ansible_user: root
+        ansible_ssh_private_key_file: /Users/clicker/playground/global_latency/terraform/global_latency.pem
+    hetzner_public_ips:
+      hosts:
+        78.47.27.220:
+          RELAYMONKEY_FINGERPRINT: hetzner-node-nbg1-dc3
+        49.12.13.93:
+          RELAYMONKEY_FINGERPRINT: hetzner-node-fsn1-dc14
+        95.216.161.98:
+          RELAYMONKEY_FINGERPRINT: hetzner-node-hel1-dc2
+      vars:
+        ansible_user: root
+        ansible_ssh_private_key_file: /Users/clicker/playground/global_latency/terraform/global_latency.pem
+    digitalocean_public_ips:
+      hosts:
+        64.227.121.35:
+          RELAYMONKEY_FINGERPRINT: droplet-fra1
+        68.183.198.1:
+          RELAYMONKEY_FINGERPRINT: droplet-tor1
+        178.62.4.75:
+          RELAYMONKEY_FINGERPRINT: droplet-lon1
+        198.199.91.195:
+          RELAYMONKEY_FINGERPRINT: droplet-nyc1
+        165.227.185.101:
+          RELAYMONKEY_FINGERPRINT: droplet-nyc3
+        104.248.93.72:
+          RELAYMONKEY_FINGERPRINT: droplet-ams3
+        128.199.138.106:
+          RELAYMONKEY_FINGERPRINT: droplet-sgp1
+        134.209.156.249:
+          RELAYMONKEY_FINGERPRINT: droplet-blr1
+        138.68.28.192:
+          RELAYMONKEY_FINGERPRINT: droplet-sfo2
+      vars:
+        ansible_user: root
+        ansible_ssh_private_key_file: /Users/clicker/playground/global_latency/terraform/global_latency.pem
+    azure_public_ips:
+      hosts:
+        52.163.120.229:
+          RELAYMONKEY_FINGERPRINT: azure-vm-southeastasia
+        52.255.178.210:
+          RELAYMONKEY_FINGERPRINT: azure-vm-eastus
+        40.124.45.157:
+          RELAYMONKEY_FINGERPRINT: azure-vm-southcentralus
+        52.147.166.24:
+          RELAYMONKEY_FINGERPRINT: azure-vm-eastus2
+        20.194.0.132:
+          RELAYMONKEY_FINGERPRINT: azure-vm-koreacentral
+        168.61.162.96:
+          RELAYMONKEY_FINGERPRINT: azure-vm-centralus
+        20.43.1.132:
+          RELAYMONKEY_FINGERPRINT: azure-vm-canadacentral
+        52.231.203.253:
+          RELAYMONKEY_FINGERPRINT: azure-vm-koreasouth
+        51.141.163.255:
+          RELAYMONKEY_FINGERPRINT: azure-vm-westus2
+        40.112.194.246:
+          RELAYMONKEY_FINGERPRINT: azure-vm-westus
+        52.148.244.60:
+          RELAYMONKEY_FINGERPRINT: azure-vm-westeurope
+        52.185.173.178:
+          RELAYMONKEY_FINGERPRINT: azure-vm-japaneast
+      vars:
+        ansible_user: adminus
+        ansible_ssh_private_key_file: /Users/clicker/playground/global_latency/terraform/global_latency.pem
+    alibaba_public_ips:
+      hosts:
+        47.74.53.129:
+          RELAYMONKEY_FINGERPRINT: ali-ap-northeast-1a
+        47.245.34.164:
+          RELAYMONKEY_FINGERPRINT: ali-ap-northeast-1b
+        147.139.35.16:
+          RELAYMONKEY_FINGERPRINT: ali-ap-south-1b
+        149.129.130.24:
+          RELAYMONKEY_FINGERPRINT: ali-ap-south-1a
+        161.117.190.249:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-1b
+        47.241.73.8:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-1c
+        47.241.129.59:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-1a
+        47.74.85.41:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-2b
+        47.74.114.153:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-2a
+        47.254.251.12:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-3a
+        47.254.232.192:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-3b
+        147.139.186.230:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-5b
+        149.129.246.49:
+          RELAYMONKEY_FINGERPRINT: ali-ap-southeast-5a
+        47.56.158.49:
+          RELAYMONKEY_FINGERPRINT: ali-cn-hongkong-c
+        47.254.169.249:
+          RELAYMONKEY_FINGERPRINT: ali-eu-central-1b
+        47.254.148.143:
+          RELAYMONKEY_FINGERPRINT: ali-eu-central-1a
+        8.208.25.6:
+          RELAYMONKEY_FINGERPRINT: ali-eu-west-1b
+        8.208.88.1:
+          RELAYMONKEY_FINGERPRINT: ali-eu-west-1a
+        47.251.33.53:
+          RELAYMONKEY_FINGERPRINT: ali-us-west-1b
+      vars:
+        ansible_user: root
+        ansible_ssh_private_key_file: /Users/clicker/playground/global_latency/terraform/global_latency.pem
+    aws_public_ips:
+      hosts:
+        18.162.244.40:
+          RELAYMONKEY_FINGERPRINT: aws-ap-east-1a
+        18.163.77.96:
+          RELAYMONKEY_FINGERPRINT: aws-ap-east-1c
+        18.162.51.187:
+          RELAYMONKEY_FINGERPRINT: aws-ap-east-1b
+        18.181.46.158:
+          RELAYMONKEY_FINGERPRINT: aws-ap-northeast-1d
+        13.231.0.248:
+          RELAYMONKEY_FINGERPRINT: aws-ap-northeast-1c
+        52.194.222.202:
+          RELAYMONKEY_FINGERPRINT: aws-ap-northeast-1a
+        15.164.175.72:
+          RELAYMONKEY_FINGERPRINT: aws-ap-northeast-2b
+        15.164.234.182:
+          RELAYMONKEY_FINGERPRINT: aws-ap-northeast-2c
+        13.124.253.91:
+          RELAYMONKEY_FINGERPRINT: aws-ap-northeast-2a
+        13.233.36.210:
+          RELAYMONKEY_FINGERPRINT: aws-ap-south-1a
+        13.233.35.107:
+          RELAYMONKEY_FINGERPRINT: aws-ap-south-1b
+        52.66.223.250:
+          RELAYMONKEY_FINGERPRINT: aws-ap-south-1c
+        13.229.216.140:
+          RELAYMONKEY_FINGERPRINT: aws-ap-southeast-1a
+        13.251.27.158:
+          RELAYMONKEY_FINGERPRINT: aws-ap-southeast-1c
+        18.139.1.133:
+          RELAYMONKEY_FINGERPRINT: aws-ap-southeast-1b
+        13.54.56.200:
+          RELAYMONKEY_FINGERPRINT: aws-ap-southeast-2a
+        54.252.197.45:
+          RELAYMONKEY_FINGERPRINT: aws-ap-southeast-2b
+        13.239.15.177:
+          RELAYMONKEY_FINGERPRINT: aws-ap-southeast-2c
+        15.223.83.220:
+          RELAYMONKEY_FINGERPRINT: aws-ca-central-1d
+        35.182.255.27:
+          RELAYMONKEY_FINGERPRINT: aws-ca-central-1b
+        15.223.3.191:
+          RELAYMONKEY_FINGERPRINT: aws-ca-central-1a
+        52.59.211.142:
+          RELAYMONKEY_FINGERPRINT: aws-eu-central-1a
+        3.120.249.221:
+          RELAYMONKEY_FINGERPRINT: aws-eu-central-1c
+        18.197.210.186:
+          RELAYMONKEY_FINGERPRINT: aws-eu-central-1b
+        13.48.104.200:
+          RELAYMONKEY_FINGERPRINT: aws-eu-north-1a
+        13.53.217.190:
+          RELAYMONKEY_FINGERPRINT: aws-eu-north-1c
+        13.48.148.58:
+          RELAYMONKEY_FINGERPRINT: aws-eu-north-1b
+        3.249.159.124:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-1b
+        3.248.196.94:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-1c
+        34.253.225.92:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-1a
+        3.11.9.41:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-2c
+        3.8.166.166:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-2b
+        18.132.2.197:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-2a
+        15.188.78.191:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-3a
+        15.236.145.184:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-3b
+        35.180.103.136:
+          RELAYMONKEY_FINGERPRINT: aws-eu-west-3c
+        157.175.99.85:
+          RELAYMONKEY_FINGERPRINT: aws-me-south-1c
+        15.185.172.70:
+          RELAYMONKEY_FINGERPRINT: aws-me-south-1b
+        15.185.175.161:
+          RELAYMONKEY_FINGERPRINT: aws-me-south-1a
+        18.231.131.114:
+          RELAYMONKEY_FINGERPRINT: aws-sa-east-1b
+        18.231.186.44:
+          RELAYMONKEY_FINGERPRINT: aws-sa-east-1c
+        18.230.65.114:
+          RELAYMONKEY_FINGERPRINT: aws-sa-east-1a
+        3.234.212.188:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-1f
+        3.89.93.120:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-1d
+        34.207.61.84:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-1e
+        18.234.244.74:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-1b
+        3.235.121.243:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-1c
+        3.94.190.181:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-1a
+        3.23.63.226:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-2c
+        3.17.11.82:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-2b
+        3.12.34.191:
+          RELAYMONKEY_FINGERPRINT: aws-us-east-2a
+        52.53.216.52:
+          RELAYMONKEY_FINGERPRINT: aws-us-west-1a
+        13.57.235.199:
+          RELAYMONKEY_FINGERPRINT: aws-us-west-1b
+        34.223.110.232:
+          RELAYMONKEY_FINGERPRINT: aws-us-west-2d
+        34.212.31.11:
+          RELAYMONKEY_FINGERPRINT: aws-us-west-2a
+        52.35.156.51:
+          RELAYMONKEY_FINGERPRINT: aws-us-west-2c
+        34.220.83.11:
+          RELAYMONKEY_FINGERPRINT: aws-us-west-2b
+      vars:
+        ansible_user: admin
+        ansible_ssh_private_key_file: /Users/clicker/playground/global_latency/terraform/global_latency.pem
+    gcp_public_ips:
+      hosts:
+        35.197.0.135:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west1-b
+        35.203.156.122:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west1-c
+        34.125.249.32:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west4-c
+        34.82.150.44:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west1-a
+        34.65.57.137:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west6-c
+        34.65.3.68:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west6-b
+        34.65.196.93:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west6-a
+        35.236.30.242:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west2-b
+        34.106.221.144:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west3-a
+        34.106.107.189:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west3-b
+        34.106.205.203:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west3-c
+        34.87.104.43:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-southeast1-b
+        34.87.9.176:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-southeast1-c
+        34.87.0.133:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-southeast1-a
+        35.228.230.84:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-north1-c
+        35.228.85.101:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-north1-b
+        35.228.4.132:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-north1-a
+        34.97.146.166:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-northeast2-c
+        34.97.164.214:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-northeast2-b
+        34.97.137.106:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-northeast2-a
+        35.189.56.123:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-australia-southeast1-b
+        35.198.133.250:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west3-c
+        34.96.129.239:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-east2-c
+        34.96.159.166:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-east2-b
+        35.205.128.63:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west1-d
+        35.229.200.153:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-east1-a
+        104.155.231.85:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-east1-b
+        35.221.244.255:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-east1-c
+        34.64.77.142:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-northeast3-b
+        34.64.240.74:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-northeast3-c
+        34.76.87.99:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west1-b
+        34.64.107.137:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-northeast3-a
+        34.94.237.1:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west2-c
+        35.201.27.165:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-australia-southeast1-a
+        35.237.208.130:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-east1-b
+        35.231.104.219:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-east1-c
+        35.242.221.176:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west3-a
+        34.76.255.81:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west1-c
+        35.203.98.239:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-northamerica-northeast1-c
+        35.203.93.197:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-northamerica-northeast1-b
+        35.245.191.145:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-east4-a
+        35.188.239.97:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-east4-c
+        35.245.156.237:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-east4-b
+        35.199.82.9:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-southamerica-east1-c
+        34.95.161.182:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-southamerica-east1-b
+        35.198.54.202:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-southamerica-east1-a
+        35.197.199.138:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west2-c
+        35.234.153.42:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west2-b
+        34.89.76.211:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west2-a
+        35.246.253.6:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west3-b
+        35.237.32.39:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-east1-d
+        34.125.157.107:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west4-b
+        34.125.165.64:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-west4-a
+        35.204.221.110:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west4-a
+        34.90.72.211:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west4-c
+        34.90.29.45:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-europe-west4-b
+        34.85.112.12:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-asia-northeast1-a
+        34.70.35.65:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-central1-f
+        35.223.64.178:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-central1-a
+        35.188.9.23:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-central1-c
+        35.222.9.38:
+          RELAYMONKEY_FINGERPRINT: gcp-instance-us-central1-b
+      vars:
+        ansible_user: admin
+        ansible_ssh_private_key_file: /Users/clicker/playground/global_latency/terraform/global_latency.pem
